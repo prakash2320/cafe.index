@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+ 
+     
+
+
+<style>
+  .navbar-nav .nav-item button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  .navbar-nav .nav-item button:hover {
+    background-color: #fbb034; /* BK orange */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-nav .nav-item i {
+    margin-right: 6px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-item button:hover i {
+    color: white;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-brand img {
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-brand img:hover {
+    transform: scale(1.05);
+  }
+
+
+    
+    .carousel-item img {
+      height: 300px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .menu-image {
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+    }
+
+    .special-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 40px 0;
+    }
+
+    footer img.social-icon {
+      width: 32px;
+      margin: 0 5px;
+    }
+
+  .special-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .special-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .special-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .special-card .card-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .special-card .card-text {
+    font-size: 14px;
+    flex-grow: 1;
+    margin: 10px 0;
+  }
+
+  .special-card button {
+    margin-top: 10px;
+  }
+
+  
+  .special-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+
+  .special-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .footer-link {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+  }
+
+  .footer-link:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .deal-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .deal-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .btn-dark {
+    background-color: #000;
+    border: none;
+  }
+
+  .btn-dark:hover {
+    background-color: #111;
+  }
+</style>
+
+ 
+ 
+  </head>
+  <body>
+   
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://1000logos.net/wp-content/uploads/2016/10/Burger-King-Logo-1994.png" height="40" alt="Burger King" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="bkNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button>Dine in Take Away</button>
+          </li>
+          <!-- <li class="nav-item">
+            <span class="nav-link">
+              <button type="start"><i class="fa-solid fa-toggle"></i></button>
+            </span>
+          </li> -->
+          <li class="nav-item">
+          
+           <i class="fa-solid fa-magnifying-glass"></i>
+          
+          </li>
+        </ul>
+
+        <form class="d-flex me-3" role="search">
+          <span class="me-2"><i class="fa-solid fa-location-dot"></i></span>
+        </form>
+
+        <ul class="navbar-nav mb-2 mb-lg-0" style=" display: flex; border-radius: 20px;">
+          <li class="nav-item me-2"> 
+           <button> <i class="fa-solid fa-store"></i>Near by Store</button>
+          </li>
+          <li class="nav-item me-2">
+            <button><i class="fa-solid fa-percent"></i>King Deals</button>
+          </li>
+          <li class="nav-item me-2">
+            <button><i class="fa-solid fa-user"></i>home</button>
+          </li>
+          <li class="nav-item me-2">
+            <button><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+          </li>
+          <li class="nav-item">
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+ 
+
+<div class="container my-4"> 
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230224044907986870_1440x300jpg"
+             class="d-block w-100"
+             style="width: 100%; height: 350px; object-fit: cover;"
+             alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/free-psd/grunge-burger-banner-template_23-2148719225.jpg?semt=ais_hybrid&w=740"
+             class="d-block w-100"
+             style="width: 100%; height: 350px; object-fit: cover;"
+             alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLyCrxDlYQKwgCb7q2mzNO52ynouWyimb-CQ&s"
+             class="d-block w-100"
+             style="width: 100%; height: 350px; object-fit: cover;"
+             alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</div>
+
+  <!-- MENU SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Our Menu</h2>
+
+      <div class="row g-3 justify-content-center">
+        <!-- Repeat this col for each menu image -->
+        <div class="col-4 col-sm-3 col-md-2">
+          <img src="/burger-image/burger.a82c1d81.png" class="menu-image img-fluid" alt="Menu" />
+        </div>
+        <div class="col-4 col-sm-3 col-md-2">
+          <img src="/burger-image/19x_web_20220917071641152673_114x101png.jpg" class="menu-image img-fluid" alt="Menu" />
+        </div>
+        <div class="col-4 col-sm-3 col-md-2">
+          <img src="/burger-image/3x_web_20201214094752825353_114x101png.jpg" class="menu-image img-fluid" alt="Menu" />
+        </div>
+        <!-- Add the other images similarly -->
+         <button class="btn btn-warning btn-lg hover-brighten">
+ <a href="page3.html" class="footer-link text-secondary text-decoration-none"> EXPLORE FULL MENU</a>
+</button>
+
+      </div>
+
+      <div class="mt-4 text-center">
+        <h5 class="fw-bold">Explore Categories:</h5>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <button class="badge bg-danger"><span>New Combos</span></button>
+          <button class="badge bg-primary"> <span>Best of Combos (Upto 20% Off)</span></button>
+          <button class="badge bg-success"><span>Whopper</span></button>
+          <button class="badge bg-warning text-dark"><span >Burger & Wraps</span></button>
+          <button class="badge bg-info text-dark"><span>Kings Premium Burgers</span></button>
+          <button class="badge bg-dark"><span>Sides</span></button>
+          <button class="badge bg-secondary"><span>Beverages</span></button>
+          <button class="badge bg-danger"><span>Chicken Wings</span></button>
+          <button  class="badge bg-primary"><span>BK Cafe™</span></button>
+          <button class="badge bg-success"><span>Friends & Family Combo</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KING DEALS -->
+
+   <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">King Deals Of The Day</h2>
+      <div class="row g-3">
+        <div class="col-md-3">
+          <img src="https://d1rgpf387mknul.cloudfront.net/16673234431x1119x540jpg" class="img-fluid deal-image" />
+        </div>
+        <div class="col-md-3">
+          <img src="https://d1rgpf387mknul.cloudfront.net/16890532331x1119x5401jpg" class="img-fluid deal-image" />
+        </div>
+        <div class="col-md-3">
+          <img src="https://d1rgpf387mknul.cloudfront.net/16587464141x1119x540jpg" class="img-fluid deal-image" />
+        </div>
+        <div class="col-md-3">
+          <img src="https://d1rgpf387mknul.cloudfront.net/16890527371x1119x540jpg" class="img-fluid deal-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+  <!-- BK SPECIAL -->
+  <section class="py-5">
+    <div class="container" id="bk-special">
+      <h2 class="text-center mb-4">BK Special</h2>
+
+      <div class="row g-4">
+        <!-- CARD 1 -->
+        <div class="col-md-3">
+          <div class="card special-card">
+            <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/2x_web_20221027205256021625_262x360jpg" class="card-img-top" alt="BK Veggie" />
+            <div class="card-body text-center">
+              <h5 class="card-title">BK VEGGIE BURGER</h5>              
+              <p class="card-text">Our tribute to classic American taste. BK Veg...</p>
+              <h5 class="text-danger">₹350/-</h5>
+              <button class="btn btn-success btn-sm">ADD+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-md-3">
+          <div class="card special-card">
+            <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/2x_web_20230314074252475398_262x360jpg" class="card-img-top" alt="Fries" />
+            <div class="card-body text-center">
+              <h5 class="card-title">FRIES (KING)</h5>             
+              <p class="card-text">The Perfect crispy partner.</p>
+              <h5 class="text-danger">₹350/-</h5>
+              <button class="btn btn-success btn-sm">ADD+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-md-3">
+          <div class="card special-card">
+            <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/2x_web_20220613104743347112_262x360jpg" class="card-img-top" alt="Crispy Chicken" />
+            <div class="card-body text-center">
+              <h5 class="card-title">CRISPY CHICKEN BURGER</h5>            
+              <p class="card-text">Crispy chicken patty burger, our best seller.</p>
+              <h5 class="text-danger">₹350/-</h5>
+              <button class="btn btn-success btn-sm">ADD+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="col-md-3">
+          <div class="card special-card">
+            <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/2x_web_20221115131212013068_262x360jpg" class="card-img-top" alt="BK Chicken" />
+            <div class="card-body text-center">
+              <h5 class="card-title">BK CHICKEN BURGER</h5>            
+              <p class="card-text">Classic American taste. BK Chicken Burger.</p>
+              <h5 class="text-danger">₹350/-</h5>
+              <button class="btn btn-success btn-sm">ADD+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button class="btn btn-warning btn-lg">EXPLORE FULL MENU</button>
+      </div>
+    </div>
+  </section>  
+
+  <div class="text-center">
+    <img src="/burger-image/home-bk-wall.96e21fb4.jpg" class="img-fluid" alt="Wall" />
+    <p class="text-muted small mt-2">
+      Disclaimer: All Images used are illustrative and strictly for representational purposes only.
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+<footer style="background-color: #343a40; color: rgb(199, 110, 110); padding: 40px 0;">
+  <div class="container">
+    <div class="row">
+      <!-- BK INFO -->
+      <div class="col-md-2">
+        <h5>BK INFO</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">About BK</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Fresh Taste</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Investor Relations</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-md-2">
+        <h5>CONTACT</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">FAQ's & Supports</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Write to us</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Careers</a></li>
+        </ul>
+      </div>
+
+      <!-- BK CARES -->
+      <div class="col-md-2">
+        <h5>BK CARES</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Nutrition Info</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Creative Bright Futures</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none" >Trust & Taste</a></li>
+        </ul>
+      </div>
+
+      <!-- LEGAL -->
+      <div class="col-md-2">
+        <h5>LEGAL</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Terms & Conditions</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link text-secondary text-decoration-none">Promotional T&C</a></li>
+        </ul>
+      </div>
+
+      <!-- Download Our App -->
+      <div class="col-md-4">
+        <h5>Download Our App</h5>
+        <button class="btn btn-dark me-2 mb-2">
+          <a href="https://www.apple.com/in/store?afid=p240%7Cgo~cmp-11116556120~adg-109516736379~ad-741425127733_kwd-10778630~dev-c~ext-~prd-~mca-~nt-search&cid=aos-in-kwgo-brand--"><img src="/burger-image/app store.png" alt="App Store" style="height: 40px;" /></a>
+        </button>
+        <button class="btn btn-dark mb-2">
+          <img src="/burger-image/play store.png" alt="Play Store" style="height: 40px;" />
+        </button>
+      </div>
+    </div>
+
+    <hr class="my-4" style="border-color: #555;" />
+
+    <!-- Footer bottom -->
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <img src="/burger-image/burger king.png" height="40" alt="Logo" />
+      <p class="mb-0 small">TM & ©2023 BURGER KING COMPANY LLC. All Rights Reserved.</p>
+      <div>
+        <a href="https://www.google.com/search?gs_ssp=eJzj4tLP1TfIyK1MKy5TYDRgdGDw4khLTE5Nys_PBgBmYAfL&q=facebook&oq=face&gs_lcrp=EgZjaHJvbWUqEwgBEC4YgwEYxwEYsQMY0QMYgAQyCQgAEEUYORiABDITCAEQLhiDARjHARixAxjRAxiABDINCAIQABiDARixAxiABDIHCAMQABiABDINCAQQABiDARixAxiABDINCAUQABiDARixAxiABDINCAYQABiDARixAxiABDIGCAcQBRhA0gEIMzA2MGowajeoAgiwAgHxBRzO134Pyw3b8QUcztd-D8sN2w&sourceid=chrome&ie=UTF-8"><img src="/burger-image/facebook.ff3fbd2c.svg" alt="Facebook" class="social-icon me-2" style="height: 24px;" /></a>
+        <a href="https://www.google.com/search?q=instagram&sca_esv=54dec9b54f70a6a6&sxsrf=AE3TifOc6MeIesqvZFuoQvobXKtw83PMcQ%3A1752734033411&ei=UZl4aMCKDaytvr0P2P724As&oq=facebook&gs_lp=Egxnd3Mtd2l6LXNlcnAiCGZhY2Vib29rKgIIATIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzIKEAAYsAMY1gQYRzINEC4YgAQYsAMYQxiKBTINEAAYgAQYsAMYQxiKBUjMFVAAWABwAngBkAEAmAEAoAEAqgEAuAEByAEAmAICoAIbmAMAiAYBkAYKkgcBMqAHALIHALgHAMIHAzMtMsgHFw&sclient=gws-wiz-serp"><img src="/burger-image/instagram.a9d8bd71.svg" alt="Instagram" class="social-icon me-2" style="height: 24px;"/></a>       
+        <a href="https://www.google.com/search?q=twitter&sca_esv=54dec9b54f70a6a6&sxsrf=AE3TifOQ1qP-BUuxtJ4PEp-e7QXW5otOSg%3A1752734071459&ei=d5l4aMvnG6j41e8Phfzy0Qs&gs_ssp=eJzj4tLP1TfIyDMsS05XYDRgdGDwYi8pzywpSS0CAFnOB00&oq=twi&gs_lp=Egxnd3Mtd2l6LXNlcnAiA3R3aSoCCAAyFhAuGIAEGLEDGNEDGEMYgwEYxwEYigUyEBAAGIAEGLEDGEMYgwEYigUyEBAAGIAEGLEDGEMYgwEYigUyCBAAGIAEGLEDMggQLhiABBixAzIQEAAYgAQYsQMYQxiDARiKBTIREC4YgAQYsQMY0QMYgwEYxwEyEBAAGIAEGLEDGEMYgwEYigUyCBAuGIAEGLEDMggQLhiABBixA0jqNFDVCFiYJHACeAGQAQSYAewBoAG1DKoBBTAuNS4zuAEDyAEA-AEBmAIGoAKdB6gCEcICBxAjGLADGCfCAgoQABiwAxjWBBhHwgITEC4YgAQYsAMYQxjIAxiKBdgBAcICGRAuGIAEGLADGNEDGEMYxwEYyAMYigXYAQHCAgoQIxiABBgnGIoFwgIQEAAYgAQYsQMYgwEYFBiHAsICCxAAGIAEGLEDGIMBwgIHECMYJxjqAsICChAjGPAFGCcY6gLCAhkQLhiABBjRAxhDGLQCGMcBGIoFGOoC2AECwgITEAAYgAQYQxi0AhiKBRjqAtgBAsICFhAuGIAEGEMYtAIYyAMYigUY6gLYAQLCAhwQLhiABBjRAxhDGLQCGMcBGMgDGIoFGOoC2AECwgIKEAAYgAQYQxiKBcICBRAAGIAEmAMc8QX4jMLwdIDjQYgGAZAGDLoGBAgBGAi6BgYIAhABGAGSBwUyLjEuM6AHs16yBwUwLjEuM7gH7wbCBwUzLTUuMcgHXw&sclient=gws-wiz-serp"><img src="/burger-image/twitter.7db1e7d8.svg" alt="Twitter" class="social-icon me-2" style="height: 24px;" /></a>
+        <a href="https://www.youtube.com/results?search_query=burger+king+mukbang"><img src="/burger-image/youtube.1ff5f219.svg" alt="YouTube" class="social-icon" style="height: 24px;" /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script>
+         alert("login success")
+ 
+  let itemCount = 0;
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('bk-special');
+    
+
+    const addButtons = container.querySelectorAll('.btn-success');
+
+    addButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        itemCount++;
+        alert(`You have added ${itemCount} item(s) to your cart`);
+      });
+    });
+  });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  </body>
+</html>

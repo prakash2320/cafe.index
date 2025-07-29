@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Burger King – Payment</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .upi-logo {
+      height: 30px;
+      margin-right: 10px;
+    }
+    .upi-btn {
+      margin-bottom: 10px;
+    }
+    .brand-logo {
+      height: 50px;
+    }
+    .card {
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <!-- Burger King logo -->
+    <div class="text-center mb-4">
+      <img src="/burger-image/burger king.png" alt="Burger King Logo" class="brand-logo">
+      <h2 class="mt-2">Complete Your Order</h2>
+      <p class="text-muted">Choose a payment method to continue</p>
+    </div>
+
+    <!-- Payment Method Selector -->
+    <div class="mb-3">
+      <select id="paymentMethod" class="form-select">
+        <option value="online" selected>Online Payment (UPI)</option>
+        <option value="offline">Cash / Pay at Store</option>
+      </select>
+    </div>
+
+    <!-- Online Payment Form -->
+    <div id="onlineForm" class="card p-4">
+      <h4 class="mb-3">Pay via UPI</h4>
+      <p class="text-muted">Scan the QR or use your preferred UPI app:</p>
+
+      <!-- QR Code -->
+      <div class="mb-3 text-center">
+        <img src="/burger-image/7x_web_20210427112353788469_114x101png.jpg" style="width: 100px; height: 100px;" alt="UPI QR Code" class="img-thumbnail">
+        <p class="mt-2"><strong>UPI ID:</strong> bkorder@upi</p>
+      </div>
+
+      <!-- UPI App Buttons -->
+      <div class="d-grid gap-2">
+        <a href="https://www.phonepe.com/" class="btn btn-outline-primary upi-btn" target="_blank">
+          <img src="https://www.phonepe.com/webstatic/11203/static/PhonePe_vertical-16158be8710408f3561e1d07d01d5d89.png" class="upi-logo">Pay with PhonePe
+        </a>
+        <a href="https://paytm.com/" class="btn btn-outline-info upi-btn" target="_blank">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtzgoGnOSSiaow6ecaZ7aUUVU6BcIIAW4p3Q&s" class="upi-logo"> Pay with paytm 
+        </a>
+      </div>
+
+      <!-- Transaction ID Input -->
+      <div class="mt-4">
+        <label for="txnId" class="form-label">Enter UPI Transaction ID</label>
+        <input type="text" id="txnId" class="form-control" placeholder="e.g. TXN1234567890">
+        <button class="btn btn-primary mt-3" onclick="payOnline()">Submit Payment</button>
+      </div>
+    </div>
+
+    <!-- Offline Payment Form -->
+    <div id="offlineForm" class="card p-4 d-none">
+      <h4 class="mb-3">Pay on Delivery / At Store</h4>
+      <p class="text-muted">You can pay when your food is delivered or pick it up and pay at the counter.</p>
+      <ul>
+        <li><strong>Cash</strong>  pay the delivery agent</li>
+        <li><strong>Card</strong>  pay at the store</li>
+      </ul>
+      <button class="btn btn-success">Confirm Order</button>
+    </div>
+  </div>
+
+
+    <footer class="footer mt-5">
+    <div class="container">
+      <div class="row">
+   
+        <div class="col-md-3">
+          <h5>BK INFO</h5>
+          <ul class="list-unstyled">
+            <li><a href="page6.html" class="footer-link text-secondary text-decoration-none">About BK</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Fresh Taste</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Investor Relations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-md-3">
+          <h5>CONTACT</h5>
+          <ul class="list-unstyled">
+            <li><a href="page4.html" class="footer-link text-secondary text-decoration-none"> reset your location</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">FAQ's & Supports</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Write to us</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- BK Cares -->
+        <div class="col-md-3">
+          <h5>BK CARES</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Nutrition Info</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Creative Bright Futures</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Trust & Taste</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="col-md-3">
+          <h5>LEGAL</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Terms & Conditions</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link text-secondary text-decoration-none">Promotional T&C</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-4" style="border-color: #555;">
+
+      <!-- Bottom Section -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAaKFx4uzLXbLX4zKiTPl8jT9kJWK9sGhq0w&s" style="margin-bottom: 10px;" height="40" alt="Logo">
+        <p class="mb-0 small">TM & ©2023 BURGER KING COMPANY LLC. All Rights Reserved.</p>
+        <div>
+          <a href="#"><img src="/burger-image/facebook.ff3fbd2c.svg" alt="Facebook" class="social-icon me-2" style="height: 24px;"></a>
+          <a href="#"><img src="/burger-image/instagram.a9d8bd71.svg" alt="Instagram" class="social-icon me-2" style="height: 24px;"></a>
+          <a href="#"><img src="/burger-image/twitter.7db1e7d8.svg" alt="Twitter" class="social-icon me-2" style="height: 24px;"></a>
+          <a href="#"><img src="/burger-image/youtube.1ff5f219.svg" alt="YouTube" class="social-icon" style="height: 24px;"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- Script -->
+  <script>
+    const paymentMethod = document.getElementById('paymentMethod');
+    const onlineForm = document.getElementById('onlineForm');
+    const offlineForm = document.getElementById('offlineForm');
+
+    paymentMethod.addEventListener('change', function () {
+      if (this.value === 'online') {
+        onlineForm.classList.remove('d-none');
+        offlineForm.classList.add('d-none');
+      } else {
+        offlineForm.classList.remove('d-none');
+        onlineForm.classList.add('d-none');
+      }
+    });
+
+    function payOnline() {
+      const txnId = document.getElementById("txnId").value.trim();
+      if (!txnId) {
+        alert("Please enter the Transaction ID after completing the payment.");
+        return;
+      }
+      alert("Thank you! Your UPI payment with Transaction ID " + txnId + " has been received.");
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
